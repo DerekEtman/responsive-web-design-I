@@ -169,7 +169,7 @@ h2 {
 }
 
 .container {
-    width: 60%;
+    /*width: 60%;*/
     max-width: 1080px;
     /* TB LR */
     margin: 0 auto;
@@ -196,28 +196,22 @@ header .mobile-logo {
 }
 
 
-header nav a{
-    /*display: flex;
-    flex-direction: row;*/
-    width:90%;
-    margin-right: 65px;
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    width:60%;
+}
+
+header nav a {
     font-size: 14px;
     color: gray;
     text-decoration: none;
+
 }
 
 header nav a:hover {
     text-decoration: underline;
 }
-
-/*
-header nav a:first-child {
-    margin-left: 0;
-}
-
-header nav a:last-child {
-    margin-right: 0;
-} */
 
 
 /* cta */
@@ -331,27 +325,26 @@ footer {
         width: 90%;
     }
 
-    header {
-        display: flex;
-        flex-flow: column;
-    }
-
     header #logo {
         display: none;
     }
 
+    
     header .mobile-logo {
         display: flex;
         justify-content: center;
         margin-bottom: 3%;
     }
 
-    nav {
+    header .navigation {
         display: flex;
-        justify-content: space-between;
-        align-content: space-between;
+        align-items: center;
         margin: 3% 0;
 
+    }
+    header .navigation a{
+        display:inline;
+        text-align: center;
     }
 
     .cta .hideMe {
@@ -383,19 +376,22 @@ footer {
         margin-bottom: 3%;
     }
 
-    nav {
-       /*  border: 1px solid black;*/
-       display:flex;
+
+    header .navigation{
+        /*  border: 1px solid black;*/
+        width:100%;
+        display: flex;
         flex-direction: column;
         align-items: center;
 
     }
 
     nav a {
-        display:flex;
+        display: flex;
         border: 1px solid grey;
         font-size: 30px;
-        padding:10px 0;
+        padding: 20px 300px;
+        margin:0;
     }
 
     .main-content .top-content {
@@ -404,9 +400,10 @@ footer {
 
     .main-content .bottom-content {
         flex-flow: column wrap;
-        margin:40px 0;
+        margin: 40px 0;
     }
-    .text-content{
+
+    .text-content {
         padding: 2%;
     }
 
