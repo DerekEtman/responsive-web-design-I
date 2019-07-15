@@ -164,8 +164,13 @@ h5 {
     margin-bottom: 15px;
 }
 
+h2 {
+    font-size: 30px;
+}
+
 .container {
     width: 60%;
+    max-width: 1080px;
     /* TB LR */
     margin: 0 auto;
 }
@@ -190,18 +195,15 @@ header .mobile-logo {
     display: none;
 }
 
-header nav {
-    /*Sborder:1px solid green; */
-}
 
-header nav a {
+header nav a{
     /*display: flex;
     flex-direction: row;*/
+    width:90%;
     margin-right: 65px;
     font-size: 14px;
     color: gray;
     text-decoration: none;
-    align-content: flex-end;
 }
 
 header nav a:hover {
@@ -361,10 +363,6 @@ footer {
 /* Mobile View */
 
 @media screen and (max-width: 500px) {
-    * {
-        background: yellow;
-    }
-
 
     .container {
         width: 90%;
@@ -386,17 +384,18 @@ footer {
     }
 
     nav {
-        border: 1px solid black;
-        display: flex;
+       /*  border: 1px solid black;*/
+       display:flex;
         flex-direction: column;
+        align-items: center;
 
     }
-    nav a{
-        border:1px solid green;
 
+    nav a {
+        display:flex;
+        border: 1px solid grey;
         font-size: 30px;
-        justify-content: center;
-        align-content: center;
+        padding:10px 0;
     }
 
     .main-content .top-content {
@@ -405,7 +404,12 @@ footer {
 
     .main-content .bottom-content {
         flex-flow: column wrap;
+        margin:40px 0;
     }
+    .text-content{
+        padding: 2%;
+    }
+
 
 
 }
