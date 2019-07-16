@@ -325,40 +325,27 @@ footer {
         width: 90%;
     }
 
-    /*header #logo {
+    header #logo {
         display: none;
-    } */
+    }
 
     
-   /* header .mobile-logo {
+    header .mobile-logo {
         display: flex;
         justify-content: center;
         margin-bottom: 3%;
-    } */
-
-    header {
-        border:1px solid red;
-
-        display: flex;
-        flex-flow: column-reverse; 
-        align-items: center;
-        justify-content: center;
-
     }
 
-   header .navigation {
+    header .navigation {
         display: flex;
-        justify-content: space-between;
-        width:90%;
+        align-items: center;
         margin: 3% 0;
 
-    } 
-   /* header .navigation a{
-        display:flex;
+    }
+    header .navigation a{
+        display:inline;
         text-align: center;
-        align-content: space-between;
-
-    } */
+    }
 
     .cta .hideMe {
         display: none;
