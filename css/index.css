@@ -1,3 +1,412 @@
 /* Use your own code or past solution for Great Idea Web Page CSS here! */
 
 
+
+
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+    display: block;
+}
+
+body {
+    line-height: 1;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+    line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+.container {
+    /*width: 60%;*/
+    max-width: 1080px;
+    /* TB LR */
+    margin: 0 auto;
+}
+
+/* header */
+
+header {
+    /* border: 1px solid red; */
+
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    width: 100%;
+    margin: auto;
+    justify-content: space-between;
+    align-content: flex-end;
+    margin-top: 35px;
+
+}
+
+header .mobile-logo {
+    display: none;
+}
+
+
+header .navigation {
+    display: flex;
+    justify-content: space-between;
+    width:60%;
+}
+
+header nav a {
+    font-size: 14px;
+    color: gray;
+    text-decoration: none;
+
+}
+
+header nav a:hover {
+    text-decoration: underline;
+}
+
+
+/* cta */
+
+.cta {
+    /* border: 1px solid green; */
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.cta .cta-text {
+    /* border: 1px solid red; */
+
+    vertical-align: top;
+    font-size: 77px;
+    text-align: center;
+    padding: 0px 75px;
+}
+
+.cta .cta-text button {
+
+    background: white;
+    vertical-align: top;
+    margin-top: 6px;
+    padding: 8px 44px;
+    font-size: 17px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+.cta .cta-text button:hover {
+    background: black;
+    color: white;
+}
+
+.cta img {
+    /*border: 1px solid yellow; */
+
+    margin-top: 50px;
+}
+
+
+/* main content */
+
+.main-content {
+    border-top: 1px solid black;
+    margin-top: 76px;
+    padding-top: 39px;
+}
+
+.main-content .top-content {
+    display: flex;
+    padding: 0 10px;
+}
+
+.main-content .top-content .text-content {
+    /* border: 1px solid red; */
+    margin-right: 34px;
+}
+
+.main-content .top-content .text-content:last-child {
+    margin-right: 0;
+}
+
+.main-content .middle-img {
+    width: 100%;
+    margin-top: 45px;
+}
+
+.main-content .bottom-content {
+    display: flex;
+    margin-top: 37px;
+    padding: 0 10px;
+}
+
+.main-content .bottom-content .text-content {
+    width: 100%;
+    display: flexbox;
+    margin-right: 12px;
+}
+
+.main-content .bottom-content .text-content:last-child {
+    margin-right: 0;
+}
+
+.contact {
+    margin-top: 57px;
+    border-top: 1px solid black;
+    padding: 39px 10px 0;
+}
+
+.contact p {
+    margin: 20px 0;
+}
+
+footer {
+    margin: 32px 0;
+    text-align: center;
+    font-size: 14px;
+}
+
+
+/*  Media Inqueries */
+
+/* Tablet View */
+
+@media screen and (max-width:800px) {
+
+    .container {
+        width: 90%;
+    }
+
+    header #logo {
+        display: none;
+    }
+
+    
+    header .mobile-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3%;
+    }
+
+    header .navigation {
+        display: flex;
+        align-items: center;
+        margin: 3% 0;
+
+    }
+    header .navigation a{
+        display:inline;
+        text-align: center;
+    }
+
+    .cta .hideMe {
+        display: none;
+    }
+
+}
+
+/* Mobile View */
+
+@media screen and (max-width: 500px) {
+
+    .container {
+        width: 90%;
+    }
+
+    header {
+        display: flex;
+        flex-flow: column;
+    }
+
+    header #logo {
+        display: none;
+    }
+
+    header .mobile-logo {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 3%;
+    }
+
+
+    header .navigation{
+        /*  border: 1px solid black;*/
+        width:100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+    }
+
+    nav a {
+        display: flex;
+        border: 1px solid grey;
+        font-size: 30px;
+        padding: 20px 300px;
+        margin:0;
+    }
+
+    .main-content .top-content {
+        flex-flow: column wrap;
+    }
+
+    .main-content .bottom-content {
+        flex-flow: column wrap;
+        margin: 40px 0;
+    }
+
+    .text-content {
+        padding: 2%;
+    }
+
+
+
+}
